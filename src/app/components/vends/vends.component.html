@@ -1,0 +1,96 @@
+    <div class="page-content-inner">
+
+        <!-- Ecommerce Orders -->
+        <section class="panel panel-with-borders">
+            <div class="panel-heading">
+                <h2>Vends</h2>
+            </div>
+            <div class="panel-body">
+
+                <!-- Upper tiles -->
+                <div class="raw">
+                    <div class="col-md-8" id="summaryChart">
+                        <div [chart]="chart" class="chart-area-1 height-300 chartist"></div>
+                    </div>
+                    <div class='col-md-4'>
+                        <div class="raw">
+                            <div  id="sideButtons" class="text-right">
+                                <div class="widget widget-seven background-warning">
+                                    <div class="widget-body">
+                                        <div href="javascript: void(0);" class="widget-body-inner">
+                                            <h5 class="text-uppercase">Vends</h5>
+                                            <i class="counter-icon icmn-cash2"></i>
+                                            <span class="counter-count">
+                                                <i class="icmn-arrow-up5"></i>
+                                                <span class="counter-init" data-from="25" data-to="942">₦945</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="raw">
+                            <div  id="sideButtons" class="text-right">
+                                <div class="widget widget-seven background-success">
+                                    <div class="widget-body">
+                                        <div href="javascript: void(0);" class="widget-body-inner">
+                                            <h5 class="text-uppercase">Average vends</h5>
+                                            <i class="counter-icon icmn-cash2"></i>
+                                            <span class="counter-count">
+                                                <i class="icmn-arrow-up5"></i>
+                                                <span class="counter-init" data-from="25" data-to="942">₦34</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End upper tiles -->
+                <h3>Recent vends</h3>
+                <table class="table table-hover nowrap" id="example1" width="100%">
+                    <thead class="thead-default">
+                    <tr>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- End Ecommerce Orders -->
+
+    </div>
+
+    <!-- Page Scripts -->
+    <script>
+        $(function () {
+
+            // Datatables
+            $('#example1').DataTable({
+                "lengthMenu": [[50, 100, 200, -1], [50, 100, 200, "All"]],
+                responsive: true,
+                "autoWidth": false
+            });
+
+        })
+    </script>
+    <!-- End Page Scripts -->
